@@ -47,6 +47,7 @@ window#waybar {
 #pulseaudio,
 #bluetooth,
 #network,
-#bettery {
+#power-profiles-daemon,
+#battery {
     padding: 0px 12px;
 }

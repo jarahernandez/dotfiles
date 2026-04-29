@@ -12,6 +12,7 @@
     "pulseaudio",
     //"bluetooth",
     "network"
+    //"power-profiles-daemon,
     //"battery"
   ],
 
@@ -102,6 +103,18 @@
     "tooltip-format-ethernet": "{ifname}: {ipaddr}",
     "tooltip-format-disconnected": "Error",
     "on-click": "kitty --class impala-float sudo impala"
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+      }
   },
 
   "battery": {

@@ -37,4 +37,9 @@ echo "Copying cursor icons..."
 mkdir -p ~/.icons
 cp -r icons/* ~/.icons/
 
+# --- Passwordless Impala for Waybar ---
+echo "Configuring sudoers for impala..."
+echo "$USER ALL=(ALL) NOPASSWD: /usr/bin/impala" | sudo tee /etc/sudoers.d/impala
+sudo chmod 440 /etc/sudoers.d/impala
+
 echo "Done."
