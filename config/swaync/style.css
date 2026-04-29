@@ -1,0 +1,98 @@
+/* Main Control Center */
+.control-center {
+  background-color: rgba(0, 0, 0, 1);
+  color: #ffffff;
+  border: 1px solid;
+  border-color: #505050;
+  border-radius: 10px;
+}
+
+/* Individual Notifications */
+.notification {
+  background-color: #252525;
+  border-color: #505050;
+  border-radius: 8px;
+  margin: 0px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  padding: 0;
+  border-radius: 100%;
+  margin-top: 4px;
+  margin-right: 12px;
+}
+
+.notification-content {
+    margin: 2px;
+}
+
+.summary {
+  /* Notification title */
+  font-size: 16px;
+}
+
+.body {
+  /* Notification body */
+  font-size: 16px;
+}
+
+/* Notification Groups */
+.notification-group {
+  background-color: #151515;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+}
+
+.notification-group-headers {
+  padding-top: 6px;
+}
+
+/* Focused or Hovered Notifications */
+.notification:hover {
+  background-color: #505050;
+  border-radius: 8px;
+}
+
+/* Widgets */
+.widget-title > label{
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.widget-title > button {
+  background-color: #505050;
+}
+
+.widget-label > label {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.widget-dnd label {
+  font-size: 20px;
+}
+
+.widget-dnd > switch {
+  background-color: #252525;
+  border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+  background-color: #505050;
+  border-radius: 12px;
+}
+
+/* .widget-mpris {
+}
+
+.widget-buttons-grid {
+} */
+
+.widget-buttons-grid flowboxchild> button {
+    background-color: #252525;
+}
+.widget-buttons-grid flowboxchild> button:hover {
+    background-color: #505050;
+}

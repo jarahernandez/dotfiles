@@ -1,0 +1,17 @@
+@import "config.rasi" 
+
+configuration {
+    show-icons: false;
+}
+
+entry {
+    placeholder: "Power menu...";
+}
+
+window {
+    width: 250px;
+}
+
+listview {
+    lines: 6;
+}

@@ -1,0 +1,121 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 20,
+  "spacing": 0,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "group/expand",
+    //"backlight",
+    "pulseaudio",
+    //"bluetooth",
+    "network"
+    //"battery"
+  ],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{id}",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "clock": {
+    "format": "{:%A  %I:%M %p}",
+    "tooltip-format": "{:%m/%d/%Y}"
+  },
+
+  // System metrics
+  "custom/expand": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "custom/endpoint":{
+    "format": "|",
+    "tooltip": false
+  },
+
+  "group/expand": {
+    "orientation": "horizontal",
+    "drawer": {
+      "click-to-reveal": true
+    },
+    "modules": ["custom/expand", "cpu","memory","temperature","custom/endpoint"]
+  },
+
+  "cpu": {
+    "format": "{usage}% 󰻠",
+    "on-click": "kitty --class btop-float btop"
+  },
+
+  "memory": {
+    "format": "{percentage}% ",
+    "on-click": "kitty --class btop-float btop"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C ",
+    "tooltip": false,
+    "on-click": "kitty --class btop-float btop"
+  },
+  
+  // System controls
+  "backlight": {
+    //"device": "amdgpu_bl1",
+    //"device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰃜", "󰃛", "󰃚"],
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["",""]
+    },
+    "tooltip-format": "Sound control",
+    "on-click": "kitty --class wiremix-float wiremix"
+  },
+  
+  "bluetooth": {
+    "format": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controllers_alias\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "on-click": "kitty --class bluetui-float bluetui"
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n\n{ifname}: {ipaddr}",
+    "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+    "tooltip-format-disconnected": "Error",
+    "on-click": "kitty --class impala-float sudo impala"
+  },
+
+  "battery": {
+    "interval":30,
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ]
+  }
+}

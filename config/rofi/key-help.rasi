@@ -1,0 +1,13 @@
+@import "config.rasi" 
+
+configuration {
+    show-icons: false;
+}
+
+entry {
+    placeholder: "Keybindings...";
+}
+
+window {
+    width: 650px;
+}

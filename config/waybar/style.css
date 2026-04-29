@@ -1,0 +1,52 @@
+/* General */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'JetBrainsMono Nerd Font Propo';
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: black;
+    color: white;
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin: 6px 15px;
+}
+
+/* Workspaces */
+#workspaces button {
+    color: white;
+    border-radius: 999px;
+    padding: 0px 12px;
+}
+
+#workspaces button.active {
+    background: white;
+    color: black;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: white;
+}
+
+/* System metrics */
+#custom-expand, #custom-endpoint {
+    padding: 0px 12px;
+}
+
+#cpu, #memory, #temperature {
+    padding: 0px 12px;
+}
+
+/* System controls */
+#backlight,
+#pulseaudio,
+#bluetooth,
+#network,
+#bettery {
+    padding: 0px 12px;
+}

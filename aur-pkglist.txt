@@ -1,0 +1,3 @@
+localsend-bin
+hyprshot
+waypaper

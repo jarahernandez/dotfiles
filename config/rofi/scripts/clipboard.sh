@@ -1,0 +1,21 @@
+#!/bin/bash
+
+tmp_dir="/tmp/cliphist"
+rm -rf "$tmp_dir"
+mkdir -p "$tmp_dir"
+
+read -r -d '' prog <<EOF
+/^[0-9]+\s<meta http-equiv=/ { next }
+match(\$0, /^([0-9]+)\s(\[\[\s)?binary.*(jpg|jpeg|png|bmp)/, grp) {
+    system("echo " grp[1] "\\\\\t | cliphist decode >$tmp_dir/"grp[1]"."grp[3])
+    print \$0"\0icon\x1f$tmp_dir/"grp[1]"."grp[3]
+    next
+}
+1
+EOF
+
+selection=$(cliphist list | gawk "$prog" | rofi -dmenu -i -show-icons -name "rofi" -display-columns 2 -theme ~/.config/rofi/clipboard.rasi)
+
+if [ -n "$selection" ]; then
+    echo "$selection" | cliphist decode | wl-copy
+fi

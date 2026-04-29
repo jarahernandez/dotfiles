@@ -1,0 +1,29 @@
+@import "config.rasi"
+
+entry {
+    placeholder: "Clipboard...";
+}
+
+window {
+    width: 650px;
+}
+
+listview {
+    lines: 4;
+}
+
+element-icon {
+    size: 65px;              /* Increase this for larger previews */
+    cursor: inherit;
+    expand: false;
+}
+
+element-text {
+    vertical-align: 0.5;     /* Keeps the ID/text centered next to the image */
+}
+
+element {
+    padding: 5px 0px 5px 10px;
+    spacing: 0px;
+    orientation: horizontal;
+}
