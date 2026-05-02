@@ -5,7 +5,7 @@ entry {
 }
 
 window {
-    width: 650px;
+    width: 700px;
 }
 
 listview {
