@@ -51,19 +51,19 @@
 
   "cpu": {
     "format": "{usage}% 󰻠",
-    "on-click": "kitty --class btop-float btop"
+    "on-click": "pgrep -x btop > /dev/null || kitty --class btop-float btop"
   },
 
   "memory": {
     "format": "{percentage}% ",
-    "on-click": "kitty --class btop-float btop"
+    "on-click": "pgrep -x btop > /dev/null || kitty --class btop-float btop"
   },
 
   "temperature": {
     "critical-threshold": 80,
     "format": "{temperatureC}°C ",
     "tooltip": false,
-    "on-click": "kitty --class btop-float btop"
+    "on-click": "pgrep -x btop > /dev/null || kitty --class btop-float btop"
   },
   
   // System controls
@@ -81,8 +81,8 @@
     "format-icons": {
       "default": ["",""]
     },
-    "tooltip-format": "Sound control",
-    "on-click": "kitty --class wiremix-float wiremix"
+    "tooltip": false,
+    "on-click": "pgrep -x wiremix > /dev/null || kitty --class wiremix-float wiremix"
   },
   
   "bluetooth": {
@@ -92,7 +92,7 @@
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controllers_alias\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-    "on-click": "kitty --class bluetui-float bluetui"
+    "on-click": "pgrep -x bluetui > /dev/null || kitty --class bluetui-float bluetui"
   },
 
   "network": {
@@ -102,7 +102,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)\n\n{ifname}: {ipaddr}",
     "tooltip-format-ethernet": "{ifname}: {ipaddr}",
     "tooltip-format-disconnected": "Error",
-    "on-click": "kitty --class impala-float sudo impala"
+    "on-click": "pgrep -x impala > /dev/null || kitty --class impala-float sudo impala"
   },
 
   "power-profiles-daemon": {
