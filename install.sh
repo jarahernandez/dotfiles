@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing essential build dependencies..."
-sudo pacman -S --needed - < pkglist.txt
+sudo pacman -S --needed - < base-pkglist.txt
 
 # --- Check and Install yay ---
 if ! command -v yay &>/dev/null; then
@@ -21,7 +21,7 @@ fi
 
 # --- Install AUR Packages ---
 echo "Installing AUR packages..."
-yay -S --needed - < aur-pkglist.txt
+yay -S --needed - < base-aur-pkglist.txt
 
 # --- Copy Configs ---
 echo "Copying main configs..."

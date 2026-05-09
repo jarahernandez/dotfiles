@@ -3,10 +3,7 @@ bluetui
 brightnessctl
 btop
 cliphist
-code
-discord
 fastfetch
-firefox
 git
 gst-plugin-pipewire
 hyprland
@@ -26,7 +23,6 @@ qt5-wayland
 qt6-wayland
 qt6ct
 rofi
-spotify-launcher
 swaync
 ttf-jetbrains-mono-nerd
 waybar
